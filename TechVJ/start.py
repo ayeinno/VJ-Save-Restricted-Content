@@ -43,7 +43,7 @@ async def upstatus(client, statusfile, message, chat):
         with open(statusfile, "r") as upread:
             txt = upread.read()
         try:
-            await client.edit_message_text(chat, message.id, f"**Uploaded:** **{txt}**")
+            await client.edit_message_text(chat, message.id, f"**ᴜᴘʟᴏᴀᴅᴇᴅ:** **{txt}**")
             await asyncio.sleep(10)
         except:
             await asyncio.sleep(5)
@@ -61,7 +61,7 @@ async def send_start(client: Client, message: Message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id, message.from_user.first_name)
     buttons = [[
-        InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url = "https://t.me/GAARA7F")
+        InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url = "https://t.me/SAJIIDFF")
     ],[
         InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/SandVillage'),
         InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/NARUTOPUBLICST')
