@@ -61,10 +61,10 @@ async def send_start(client: Client, message: Message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id, message.from_user.first_name)
     buttons = [[
-        InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url = "https://t.me/GAARA7F")
+        InlineKeyboardButton("⌯ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⌯", url = "https://t.me/iMSASUKES7i")
     ],[
-        InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/SandVillage'),
-        InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/NARUTOPUBLICST')
+        InlineKeyboardButton('⌯ sᴜᴘᴘᴏʀᴛ ⌯', url='https://t.me/SandVillage'),
+        InlineKeyboardButton('⌯ ᴄʜᴀɴɴᴇʟ ⌯', url='https://t.me/NARUTOPUBLICST')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await client.send_message(
@@ -178,7 +178,7 @@ async def handle_private(client: Client, acc, message: Message, chatid: int, msg
                 await client.send_message(message.chat.id, f"Error: {e}", reply_to_message_id=message.id, parse_mode=enums.ParseMode.HTML)
             return 
 
-    smsg = await client.send_message(message.chat.id, '**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ**', reply_to_message_id=message.id)
+    smsg = await client.send_message(message.chat.id, '**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...**', reply_to_message_id=message.id)
     asyncio.create_task(downstatus(client, f'{message.id}downstatus.txt', smsg, chat))
     try:
         file = await acc.download_media(msg, progress=progress, progress_args=[message,"down"])
